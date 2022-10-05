@@ -15,7 +15,7 @@ function renderRecipes() {
     <h2>${recipe.name})</h2>
     <h3>${recipe.flavour}</h3>
   </header>
-  <span onClick="deleteTreasure(event)">delete</span>
+  <span onClick="deleteRecipe(event)">delete</span>
   <img src="${recipe.img}>"
   <br>
   <p> ${recipe.ingredients} </p>
@@ -25,7 +25,7 @@ function renderRecipes() {
 
 }
 
-function deleteRecipes(event) {
+function deleteRecipe(event) {
   const deleteBtn = event.target
   const recipeDOM = deleteBtn.closest('.recipe')
   const recipeId = recipeDOM.dataset.id
