@@ -15,13 +15,11 @@ app.listen(PORT,
   () => console.log(`server listening to port ${PORT}`)
 )
 
-
-
-
-
 app.use(logger)
 
 app.use(express.static('client'))
 
-//middleware
+app.use(express.json())
+
+//middleware for controllers 
 app.use('/api/recipe', recipeController)
