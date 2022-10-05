@@ -1,5 +1,6 @@
 const state = {
-  recipes: []
+  recipes: [],
+  loggedInUserName: null
 }
 
 fetch('/api/recipes')
