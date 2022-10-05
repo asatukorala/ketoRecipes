@@ -23,3 +23,4 @@ app.use(express.json())
 
 //middleware for controllers 
 app.use('/api/recipes', recipeController)
+app.use('/api/users', usersController)
