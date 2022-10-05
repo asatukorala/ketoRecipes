@@ -24,6 +24,9 @@ function renderSignUp() {
 function signUp(event) {
   event.preventDefault()
   const form = event.target
+
+
+  // takes data from the form html tag and converts it into an object literal.
   const data = Object.fromEntries(new FormData(form))
 
   fetch('/api/users', {
