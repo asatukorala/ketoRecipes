@@ -1,4 +1,3 @@
-
 function renderAddRecipe() {
   document.querySelector('#page').innerHTML = `
     <section class="create-recipe">
