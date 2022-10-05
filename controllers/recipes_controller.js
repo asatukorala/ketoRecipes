@@ -23,4 +23,12 @@ router.post('/', (req, res) => {
     .then(recipe => res.json(recipe))
 })
 
+router.delete('/:id', (req, res) => {
+  const recipeId = req.params.id
+
+  Recipe
+    .delete(recipeId)
+    .then(() => res.json({ message: 'deleted successfully' }))
+})
+
 module.exports = router
