@@ -8,9 +8,16 @@
   <title>Document</title>
 </head>
 
+
+<!-- Functions -->
+
+<script src="./js/initialize.js"></script>
+<script defer src="./js/components/add_recipe.js"> </script>
+<script defer src="./js/components/recipe_list.js"> </script>
+
+
 <body>
   <h1>Welcome to Keto Recipes</h1>
-  <section class="keto-list"></section>
 
   <form>
     <h2>Add Recipes</h2>
@@ -36,53 +43,5 @@
     </fieldset>
     <button>Add Recipes</button>
   </form>
-
-  <script>
-    function createRecipe(event) {
-      event.preventDefault()
-      const form = event.target
-
-      const data = Object.fromEntries(new FormData(form))
-
-
-      fetch('/api/recipes', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(data)
-      })
-        .then(res => res.json())
-        .then(recipe => {
-          state.recipes.push(recipe)
-          renderRecipeList()
-        })
-
-      // const form = document.querySelector('form')
-      // form.addEventListener('submit', createRecipe)
-    }
-
-  </script>
-
-
-
-</body>
-<script>
-
-  function renderRecipeList() {
-    const recipeListDom = document.querySelector('.recipe-list')
-
-    recipeListDom.innerHTML = state.recipes.map(recipes => ` 
-    <section class="recipe">
-      <header> 
-        <h2>${recipe.name})</h2>
-        <h3>${recipe.flavour}</h3>
-      </header>
-      <img src="${recipe.img}>"
-      <br>
-      <p> ${recipe.ingredients} </p>
-      <p> ${recipe.cooking_method} </p>
-`).join('')
-  }
-
-</script>
 
 </html>
