@@ -9,7 +9,7 @@ const Recipe = {
       .then(dbRes => dbRes.rows)
 
   },
-  
+
   create: (name, img, flavour, ingredients, cooking_method) => {
     const sql = `
       INSERT INTO recipes(name, img, flavour, ingredients, cooking_method)
@@ -32,8 +32,8 @@ const Recipe = {
   //   return db.query(sql, [recipeId])
   // }
 
-  }  
-  
+  // }  
+
 }
 
 module.exports = Recipe
