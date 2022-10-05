@@ -1,7 +1,8 @@
 const express = require('express')
 const app = express()
-const port = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3000;
 
+const recipeController = require('.controllers/recipes_controller')
 
 app.listen(PORT,
   () => console.log(`server listening to port ${PORT}`)
@@ -9,9 +10,9 @@ app.listen(PORT,
 // models
 const Recipe = require('./models/recipe')
 
+const logger = require('./middlewares/logger')
+
+
+app.use(logger)
 //routes
-app.get('/api/recipes', (req, res) => {
-  Recipe
-    .findAll()
-    .then(recipes => res.json(recipes))
-})
+app.use('/api/recipe', recipeController)
