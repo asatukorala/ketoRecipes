@@ -11,23 +11,16 @@ const recipesController = require('./controllers/recipes_controller')
 const usersController = require('./controllers/users_controller')
 const sessionsController = require('./controllers/sessions_controller')
 
-// models
-const Recipe = require('./models/recipe')
-
 app.listen(PORT,
   () => console.log(`server listening to port ${PORT}`)
 )
 
 app.use(logger)
-
-
 app.use(express.static('client'))
-
 app.use(express.json())
-
 app.use(sessions)
 
 //middleware for controllers 
-app.use('/api/recipes', recipeController)
+app.use('/api/recipes', recipesController)
 app.use('/api/users', usersController)
 app.use('/api/sessions', sessionsController)
