@@ -7,9 +7,8 @@ const Recipe = {
     return db
       .query(sql)
       .then(dbRes => dbRes.rows)
-
-  }
-  //,
+  }  
+  // },
 
   // create: (name, flavour, ingredients, cooking_method) => {
   //   const sql = `
@@ -27,6 +26,7 @@ const Recipe = {
   //   const sql = `
   //     DELETE FROM recipes WHERE id = $1
   //   `
+
 
   //   return db.query(sql, [recipeId])
   // }
