@@ -1,4 +1,4 @@
-const state ={
+const state = {
   recipes: []
 }
 
@@ -8,4 +8,3 @@ fetch('/api/recipes')
     state.recipes = recipes
     renderRecipeList()
   })
-  
