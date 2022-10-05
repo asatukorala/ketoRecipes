@@ -25,6 +25,7 @@ function signUp(event) {
   event.preventDefault()
   const form = event.target
 
+
   // takes data from the form html tag and converts it into an object literal.
   const data = Object.fromEntries(new FormData(form))
 
@@ -34,8 +35,8 @@ function signUp(event) {
     body: JSON.stringify(data)
   })
     .then(res => res.json())
-    .then(user => {
-      console.log(user)
+    .then(userName => {
+      state.loggedInUserName = userName
       renderRecipeList()
     })
 }

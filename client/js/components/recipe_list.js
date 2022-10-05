@@ -1,20 +1,21 @@
 function renderRecipeList() {
   document.querySelector('#page').innerHTML = `
-  <section class='recipe-list'>
+  <section class="recipe-list">
   ${renderRecipes()}
   </section>
   `
 }
 
 function renderRecipes() {
+
   return state.recipes.map(recipe => `
 
-  <section class="recipe" data-id='${recipe.id}>
+  <section class="recipe" data-id='${recipe.id}'>
   <header> 
     <h2>${recipe.name})</h2>
     <h3>${recipe.flavour}</h3>
   </header>
-  <span onClick="deleteTreasure(event)">delete</span>
+  <span onClick="deleteRecipe(event)">delete</span>
   <img src="${recipe.img}>"
   <br>
   <p> ${recipe.ingredients} </p>
@@ -24,7 +25,7 @@ function renderRecipes() {
 
 }
 
-function deleteRecipes(event) {
+function deleteRecipe(event) {
   const deleteBtn = event.target
   const recipeDOM = deleteBtn.closest('.recipe')
   const recipeId = recipeDOM.dataset.id

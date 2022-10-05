@@ -6,7 +6,7 @@ const PORT = process.env.PORT || 3000;
 const logger = require('./middlewares/logger')
 
 //controllers
-const recipeController = require('.controllers/recipes_controller')
+const recipeController = require('./controllers/recipes_controller')
 
 // models
 const Recipe = require('./models/recipe')
@@ -22,4 +22,5 @@ app.use(express.static('client'))
 app.use(express.json())
 
 //middleware for controllers 
-app.use('/api/recipe', recipeController)
+app.use('/api/recipes', recipeController)
+app.use('/api/users', usersController)

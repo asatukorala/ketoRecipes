@@ -1,7 +1,7 @@
 function renderAddRecipe() {
   document.querySelector('#page').innerHTML = `
     <section class="create-recipe">
-      <form onSubmit="createTreasure(event)">
+      <form onSubmit="createRecipe(event)">
         <h2>Add Recipes</h2>
         <fieldset>
           <label for="">Name: </label>
