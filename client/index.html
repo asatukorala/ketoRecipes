@@ -10,33 +10,14 @@
 
 <body>
   <h1>Welcome to Keto Recipes</h1>
-  <section class="keto-list"></section>
+  <nav class="header-nav">
+    <ul>
+      <li onClick="renderAddRecipe()">Add Recipe</li>
+      <li>onClick="renderRecipeList()">View Recipes</li>
+    </ul>
+  </nav>
 
-  <form>
-    <h2>Add Recipes</h2>
-    <fieldset>
-      <label for="">Name:</label>
-      <input type="text" name="name">
-    </fieldset>
-    <fieldset>
-      <label for="">Img:</label>
-      <input type="text" name="img">
-    </fieldset>
-    <fieldset>
-      <label for="">flavour:</label>
-      <input type="text" name="flavour">
-    </fieldset>
-    <fieldset>
-      <label for="">ingredients:</label>
-      <input type="text" name="ingredients">
-    </fieldset>
-    <fieldset>
-      <label for="">Cooking method:</label>
-      <input type="text" name="cooking_method">
-    </fieldset>
-    <button>Add Recipes</button>
-  </form>
-
+  
   <script>
     function createRecipe(event) {
       event.preventDefault()
@@ -63,7 +44,7 @@
   </script>
 
 
-
+<main id="page" class="content"></main>
 </body>
 <script>
 
