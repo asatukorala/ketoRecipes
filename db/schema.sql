@@ -4,6 +4,7 @@ CREATE DATABASE keto_recipes;
 CREATE TABLE recipes(
   id SERIAL PRIMARY KEY,
   name TEXT,
+  img TEXT,
   flavour TEXT,
   ingredients TEXT,
   cooking_method TEXT
@@ -11,7 +12,7 @@ CREATE TABLE recipes(
 
 INSERT INTO recipes(name, flavour, ingredients, cooking_method)
 VALUES
-  ('Crack Keto Biscuits', 'sweet', '4 oz cream cheese
+  ('Crack Keto Biscuits', 'https://images.unsplash.com/photo-1590671886400-8f8088b97cb0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MTV8MjYzOTY0MDh8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60', 'sweet', '4 oz cream cheese
 2 cups shredded mozzarella cheese
 2 tsp baking powder
 3 eggs
