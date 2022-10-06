@@ -23,6 +23,25 @@ router.post('/', (req, res) => {
     .then(recipe => res.json(recipe))
 })
 
+router.put('/:id', (req, res) => {
+
+  console.log("squeak")
+  const recipe = req.body
+  const recipeId = req.params.id
+  // state.recipes[recipeId] = recipe
+
+  const name = req.body.name 
+  const img = req.body.img 
+  const flavour = req.body.flavour
+  const ingredients = req.body.ingredients
+  const cooking_method = req.body.cooking_method
+
+  Recipe
+    .edit(name, img, flavour, ingredients, cooking_method, recipeId)
+    .then(recipe => 
+  res.json({ message: `${recipe.name} was successfully updated.` }))
+})
+
 router.delete('/:id', (req, res) => {
   const recipeId = req.params.id
 

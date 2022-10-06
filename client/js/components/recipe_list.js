@@ -7,6 +7,7 @@ function renderRecipeList() {
 }
 
 function renderRecipes() {
+
   if (state.loggedInUserName != null) {
     return state.recipes.map(recipe => `
       ${state.loggedInUserName}
@@ -37,7 +38,26 @@ function renderRecipes() {
       </section>
       `).join('')
   }
+
+
+  return state.recipes.map(recipe => `
+
+  <section class="recipe" data-id='${recipe.id}'>
+  <header> 
+    <h2>${recipe.name}</h2>
+    <h3>${recipe.flavour}</h3>
+  </header>
+  <span onClick="deleteRecipe(event)">delete</span>
+  <span onClick="renderEditRecipe(${recipe.id})">edit</span>
+  <img src="${recipe.img}>"
+  <br>
+  <p> ${recipe.ingredients} </p>
+  <p> ${recipe.cooking_method} </p>
+  </section>
+  `).join('')
+
 }
+
 
 function deleteRecipe(event) {
   const deleteBtn = event.target

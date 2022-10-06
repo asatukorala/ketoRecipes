@@ -22,6 +22,20 @@ const Recipe = {
       .then(dbRes => dbRes.rows[0])
   },
 
+  edit: (id, name, img, flavour, ingredients, cooking_method) => {
+    const sql = `
+      UPDATE recipes
+      SET name = $1, img = $2, flavour = $3, ingredients = $4, cooking_method = $5
+      WHERE id = $6
+      RETURNING *
+    `
+
+    return db
+      .query(sql, [id, name, img, flavour, ingredients, cooking_method])
+      .then(dbRes => dbRes.rows[0])
+  },
+
+
   delete: recipeId => {
     const sql = `
       DELETE FROM recipes WHERE id = $1
