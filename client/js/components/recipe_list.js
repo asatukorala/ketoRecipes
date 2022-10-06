@@ -7,22 +7,36 @@ function renderRecipeList() {
 }
 
 function renderRecipes() {
-
-  return state.recipes.map(recipe => `
-
-  <section class="recipe" data-id='${recipe.id}'>
-  <header> 
-    <h2>${recipe.name})</h2>
-    <h3>${recipe.flavour}</h3>
-  </header>
-  <span onClick="deleteRecipe(event)">delete</span>
-  <img src="${recipe.img}>"
-  <br>
-  <p> ${recipe.ingredients} </p>
-  <p> ${recipe.cooking_method} </p>
-  </section>
-  `).join('')
-
+  if (state.loggedInUserName != null) {
+    return state.recipes.map(recipe => `
+      ${state.loggedInUserName}
+      <section class="recipe" data-id='${recipe.id}'>
+      <header> 
+        <h2>${recipe.name})</h2>
+        <h3>${recipe.flavour}</h3>
+      </header>
+      <span onClick="deleteRecipe(event)">delete</span>
+      <img src="${recipe.img}>"
+      <br>
+      <p> ${recipe.ingredients} </p>
+      <p> ${recipe.cooking_method} </p>
+      </section>
+      `).join('')
+  } else {
+    return state.recipes.map(recipe => `
+      ${state.loggedInUserName}
+      <section class="recipe" data-id='${recipe.id}'>
+      <header> 
+        <h2>${recipe.name})</h2>
+      </header>
+      <span onClick="deleteRecipe(event)">delete</span>
+      <img src="${recipe.img}>"
+      <br>
+      <p> ${recipe.ingredients} </p>
+      <p> ${recipe.cooking_method} </p>
+      </section>
+      `).join('')
+  }
 }
 
 function deleteRecipe(event) {
