@@ -35,7 +35,6 @@ function createRecipe(event) {
 
   const data = Object.fromEntries(new FormData(form))
 
-
   fetch('/api/recipes', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
