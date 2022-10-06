@@ -10,15 +10,15 @@ function renderEditRecipe(recipeId) {
       <form onSubmit="editRecipe(event)">
         <h2>Edit Recipes</h2>
         <fieldset>
-          <label for="">recipeId: </label>
-          <input type="text" name="recipeId" value="${recipeId}">
+          <label for=""></label>
+          <input type="hidden" name="recipeId" value="${recipeId}">
         </fieldset>
         <fieldset>
-          <label for="">Name: </label>
+          <label for="">Recipe name: </label>
           <input type="text" name="name">
         </fieldset>
         <fieldset>
-          <label for="">Img: </label>
+          <label for="">Image: </label>
           <input type="text" name="img">
         </fieldset>
         <fieldset>
@@ -33,7 +33,7 @@ function renderEditRecipe(recipeId) {
           <label for="">Cooking Method: </label>
           <input type="text" name="cooking_method">
         </fieldset>
-        <button>Edit Recipes</button>
+        <button>Edit Recipe</button>
       </form>
     </section>
   `
