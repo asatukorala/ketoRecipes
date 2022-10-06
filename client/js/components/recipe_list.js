@@ -6,32 +6,6 @@ function renderRecipeList() {
   `
 }
 
-function loginState() {
-  if (state.loggedInUserName != null) {
-    return document.querySelector(".container").innerHTML = `
-      <nav class="header-nav">
-      <ul class="menu">
-        <li onClick="renderAddRecipe()">Add Recipe</li>
-        <li onClick="renderRecipeList()">View Recipe</li>
-        <li onClick="renderSignUp()">Sign Up</li>
-        <li onClick="renderLogOut()">Logout</li> 
-      </ul>
-      </nav>
-      `
-    } else {
-      return document.querySelector(".container").innerHTML = `
-      <nav class="header-nav">
-      <ul class="menu">
-        <li onClick="renderAddRecipe()">Add Recipe</li>
-        <li onClick="renderRecipeList()">View Recipe</li>
-        <li onClick="renderSignUp()">Sign Up</li>
-        <li onClick="renderLogin()">Login</li> 
-      </ul>
-      </nav>
-      `
-  } 
-}
-
 function renderRecipes() {
   loginState()
   if (state.loggedInUserName != null) {
