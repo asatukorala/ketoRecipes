@@ -5,15 +5,15 @@ function renderEditRecipe(recipeId) {
       <form onSubmit="editRecipe(event)">
         <h2>Edit Recipes</h2>
         <fieldset>
-          <label for=""></label>
-          <input type="hidden" name="recipeId" value="${recipeId}">
+          <label for="">recipeId: </label>
+          <input type="text" name="recipeId" value="${recipeId}">
         </fieldset>
         <fieldset>
-          <label for="">Recipe name: </label>
+          <label for="">Name: </label>
           <input type="text" name="name">
         </fieldset>
         <fieldset>
-          <label for="">Image: </label>
+          <label for="">Img: </label>
           <input type="text" name="img">
         </fieldset>
         <fieldset>
@@ -28,7 +28,7 @@ function renderEditRecipe(recipeId) {
           <label for="">Cooking Method: </label>
           <input type="text" name="cooking_method">
         </fieldset>
-        <button>Edit Recipe</button>
+        <button>Edit Recipes</button>
       </form>
     </section>
   `
@@ -51,9 +51,7 @@ function editRecipe(event) {
     .then(recipe => {
       console.log(state.recipes)
       state.recipes = state.recipes.filter(r => r.id != recipe)
-
       
       renderRecipeList()
-      location.reload()
     })
 }
