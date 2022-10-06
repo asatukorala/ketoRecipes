@@ -1,9 +1,4 @@
 function renderEditRecipe(recipeId) { 
-  // let a = state.recipes.forEach ((recipe) => {
-  //   console.log(recipe)
-  // }
-
-  // )
   document.querySelector('#page').innerHTML = `
  
     <section class="create-recipe">
@@ -44,7 +39,6 @@ function editRecipe(event) {
   
   const form = event.target
    
-
   const data = Object.fromEntries(new FormData(form))
 
   console.log("meow")
@@ -63,17 +57,3 @@ function editRecipe(event) {
       location.reload()
     })
 }
-
-// function deleteRecipe(event) {
-//   const deleteBtn = event.target
-//   const recipeDOM = deleteBtn.closest('.recipe')
-//   const recipeId = recipeDOM.dataset.id
-
-//   fetch(`/api/recipes/${recipeId}`, {
-//     method: 'DELETE'
-//   })
-//     .then(() => {
-//       state.recipes = state.recipes.filter(r => r.id != recipeId)
-//       renderRecipeList()
-//     })
-//   }   
