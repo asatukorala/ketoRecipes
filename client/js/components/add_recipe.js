@@ -4,11 +4,11 @@ function renderAddRecipe() {
       <form onSubmit="createRecipe(event)">
         <h2>Add Recipes</h2>
         <fieldset>
-          <label for="">Recipe name: </label>
+          <label for="">Name: </label>
           <input type="text" name="name">
         </fieldset>
         <fieldset>
-          <label for="">Image: </label>
+          <label for="">Img: </label>
           <input type="text" name="img">
         </fieldset>
         <fieldset>
