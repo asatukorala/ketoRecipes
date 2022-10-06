@@ -6,8 +6,34 @@ function renderRecipeList() {
   `
 }
 
-function renderRecipes() {
+function loginState() {
+  if (state.loggedInUserName != null) {
+    return document.querySelector(".container").innerHTML = `
+      <nav class="header-nav">
+      <ul class="menu">
+        <li onClick="renderAddRecipe()">Add Recipe</li>
+        <li onClick="renderRecipeList()">View Recipe</li>
+        <li onClick="renderSignUp()">Sign Up</li>
+        <li onClick="renderLogOut()">Logout</li> 
+      </ul>
+      </nav>
+      `
+    } else {
+      return document.querySelector(".container").innerHTML = `
+      <nav class="header-nav">
+      <ul class="menu">
+        <li onClick="renderAddRecipe()">Add Recipe</li>
+        <li onClick="renderRecipeList()">View Recipe</li>
+        <li onClick="renderSignUp()">Sign Up</li>
+        <li onClick="renderLogin()">Login</li> 
+      </ul>
+      </nav>
+      `
+  } 
+}
 
+function renderRecipes() {
+  loginState()
   if (state.loggedInUserName != null) {
     return state.recipes.map(recipe => `
       ${state.loggedInUserName}
@@ -38,26 +64,7 @@ function renderRecipes() {
       </section>
       `).join('')
   }
-
-
-  return state.recipes.map(recipe => `
-
-  <section class="recipe" data-id='${recipe.id}'>
-  <header> 
-    <h2>${recipe.name}</h2>
-    <h3>${recipe.flavour}</h3>
-  </header>
-  <span onClick="deleteRecipe(event)">delete</span>
-  <span onClick="renderEditRecipe(${recipe.id})">edit</span>
-  <img src="${recipe.img}>"
-  <br>
-  <p> ${recipe.ingredients} </p>
-  <p> ${recipe.cooking_method} </p>
-  </section>
-  `).join('')
-
 }
-
 
 function deleteRecipe(event) {
   const deleteBtn = event.target
@@ -71,6 +78,4 @@ function deleteRecipe(event) {
       state.recipes = state.recipes.filter(r => r.id != recipeId)
       renderRecipeList()
     })
-
-
 }
