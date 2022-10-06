@@ -15,13 +15,17 @@ function renderRecipes() {
     <h2>${recipe.name}</h2>
     <h3>${recipe.flavour}</h3>
   </header>
-  <span onClick="deleteRecipe(event)">delete</span>
-  <span onClick="renderEditRecipe(${recipe.id})">edit</span>
+  <span class="button" onClick="deleteRecipe(event)">delete</span>
+  <span class="button1" onClick="renderEditRecipe(${recipe.id})">edit</span>
+  <br></br>
   <img src="${recipe.img}>"
   <br>
+  <span><h4>Ingredients</h4></span>
   <p> ${recipe.ingredients} </p>
+  <span><h4>Cooking method</h4></span>
   <p> ${recipe.cooking_method} </p>
   </section>
+  
   `).join('')
 
 }

@@ -27,7 +27,7 @@ nav ul li {
 
 nav ul li::after{
   content: "";
-  background: #f44566;
+  background: #2A9D8F;
   width: 100%;
   height: 100%;
   border-radius: 30px;
