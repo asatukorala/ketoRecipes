@@ -1,7 +1,7 @@
 # ketoRecipes
 An app which allows the user to manage keto recipes.
 
-# :computer: [Click here]() to see my live project!
+# :computer: [Click here](https://infinite-wildwood-14300.herokuapp.com/) to see my live project!
 
 # :information_source: About 
 It's a CRUD (Create Read Update Delete) app. This is a group project by Zena, George and Asela. 
@@ -11,7 +11,8 @@ We used the Scavenger Hunt app as a guide when writing it. It was written in a s
 # :pencil: Planning & Problem Solving -
 We began our planning on a Trello board. 
 
-include screenshot of our Trello board.
+Trello board:
+![trelloboard](https://github.com/asatukorala/ketoRecipes/blob/main/KR%20Trello%20Board.PNG?raw=true)
 
 include screenshot of the wireframe. 
 
@@ -34,6 +35,6 @@ sessions_controller.js
 
 
 # :persevere: Lessons Learnt 
-We encountered problems with collaborating via GitHub as some mistakes were made in the process of collaboration. These mistakes were fixed. We should have got more familiar with the GitHub collaboration process.  
+It took time to get used to how branches work and the correct way to use them. We encountered problems with collaborating via GitHub as some mistakes were made in the process of collaboration. These mistakes were fixed. We should have got more familiar with the GitHub collaboration process.  
 
 # :white_check_mark: Future Features 
