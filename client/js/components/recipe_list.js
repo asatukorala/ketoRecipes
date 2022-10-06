@@ -12,10 +12,11 @@ function renderRecipes() {
 
   <section class="recipe" data-id='${recipe.id}'>
   <header> 
-    <h2>${recipe.name})</h2>
+    <h2>${recipe.name}</h2>
     <h3>${recipe.flavour}</h3>
   </header>
   <span onClick="deleteRecipe(event)">delete</span>
+  <span onClick="renderEditRecipe(${recipe.id})">edit</span>
   <img src="${recipe.img}>"
   <br>
   <p> ${recipe.ingredients} </p>
@@ -24,6 +25,7 @@ function renderRecipes() {
   `).join('')
 
 }
+
 
 function deleteRecipe(event) {
   const deleteBtn = event.target

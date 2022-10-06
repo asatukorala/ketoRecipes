@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900");
+* {
+  box-sizing: border-box;
+}
+
+body {
+  /* margin: 0 2rem; */
+  font-family: "Poppins", sans-serif;
+}
+
+form {
+  max-width: 700px;
+  box-shadow: 0 0 3px 0 rgba(0,0,0,3);
+  background: #ADB7A4;
+  padding: 20px;
+  margin:  0 auto;
+  text-align: center;
+  border-radius: 20px;
+}
+
+.title-word {
+  animation: color-animation 4s linear infinite;
+}
+
+.title-word-1 {
+  --color-1: #E76F51;
+  --color-2: #390099;
+  --color-3: #FF70E6;
+}
+
+.title-word-2 {
+  --color-1: #2176ff;
+  --color-2: #d62828;
+  --color-3: #2A9D8F;
+}
+
+.title-word-3 {
+  --color-1: #219ebc;
+  --color-2: #FF70E6;
+  --color-3: #219ebc;
+}
+
+.title-word-4 {
+  --color-1: #d62828;
+  --color-2: #E76F51;
+  --color-3: #FF70E6;
+}
+
+@keyframes color-animation {
+  0%    {color: var(--color-1)}
+  32%   {color: var(--color-1)}
+  33%   {color: var(--color-2)}
+  65%   {color: var(--color-2)}
+  66%   {color: var(--color-3)}
+  99%   {color: var(--color-3)}
+  100%  {color: var(--color-1)}
+}
+
+/* Here are just some visual styles. 🖌 */
+
+.container1 {
+  display: grid;
+  place-items: center;  
+  text-align: center;
+  /* height: 100vh */
+}
+
+.title {
+  /* font-family: "Montserrat", sans-serif; */
+  font-weight: 800;
+  font-size: 25px;
+  text-transform: uppercase;
+  /* text-align: center; */
+}
+
+h2 {
+  color:  #BF3100;
+  margin-bottom: 30px;
+}
+
+form fieldset {
+  border: none;
+  padding-left: 0;
+  padding-right: 0;
+  color: #BF3100;
+}
+
+form input {
+  padding: 0.5rem;
+  width: 100%;
+  border-radius: 20px;
+  margin: 0.5rem 0;
+  border: 1px solid #999; 
+  outline: none;
+} 
+
+button {
+  color: #fff;
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 20px;
+  font-size: 15px;
+  margin: 0.5rem 0;
+  border: none;
+  outline: none;
+  background-color: #BF3100;
+}
