@@ -8,6 +8,7 @@ function renderRecipeList() {
 
 function renderRecipes() {
 
+  
   return state.recipes.map(recipe => `
 
   <section class="recipe" data-id='${recipe.id}'>
