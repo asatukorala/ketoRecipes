@@ -24,7 +24,10 @@ In a microwave-safe bowl, microwave cream cheese, and mozzarella cheese on HIGH 
 Add baking powder, eggs, ranch mix, and almond flour to cream cheese mixture. Stir well.
 Stir in cheddar cheese and bacon. Stir until combined.
 Spray a 10-inch iron skillet with cooking spray. Divide the dough into 11 or 12 balls and place in skillet. Place skillet in the refrigerator for 10 minutes.
-Remove skillet from the refrigerator and bake for 20 to 25 minutes. Brush cooked biscuits with melted butter and sprinkle with dried parsley, if desired.');
+Remove skillet from the refrigerator and bake for 20 to 25 minutes. Brush cooked biscuits with melted butter and sprinkle with dried parsley, if desired.'),
+('Keto fat bomb', 'https://images.unsplash.com/photo-1503153888445-cd465dba5c3a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8bnV0JTIwY2x1c3RlcnN8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60%3E', '1 cup macadamia nuts 1 cup pecan or walnut halves ½ cup pepitas ½ cup pistachios 1 cup dark chocolate sugar-free chocolate chips 1 ½ tablespoon coconut oil Flaky sea salt for sprinkling', 'In a cast-iron skillet, place the coconut oil and the chocolate chips over low heat. Stir constantly until it gets melted. Put nuts and seeds, once melted. Stir to combine. Place about 2 tbsp. worth of the mixture by using a spoon into mounds on the parchment-lined baking sheet. If desired, use flaky sea salt to sprinkle. Now put the baking sheet to the freezer and freeze for 60 minutes. Put the clusters to a lidded freezer-safe container, once set. Store for up to one month.'),
+('Chicken Cheese Balls', 'https://images.unsplash.com/photo-1593001874117-c99c800e3eb8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGNoaWNrZW4lMjBiYWxsc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60%3E', '')
+;
 
 CREATE TABLE users(
   id SERIAL PRIMARY KEY,
