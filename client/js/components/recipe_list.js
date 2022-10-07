@@ -17,8 +17,8 @@ function renderRecipes() {
         <h2>${recipe.name})</h2>
         <h3>${recipe.flavour}</h3>
       </header>
-      <span class="button" onClick="deleteRecipe(event)">delete</span>
       <span class="button1" onClick="renderEditRecipe(${recipe.id})">edit</span>
+      <span class="button" onClick="deleteRecipe(event)">delete</span>
       <br></br>
       <img src="${recipe.img}>"
       <br>
