@@ -33,10 +33,8 @@ function renderRecipes() {
       <section class="recipe" data-id='${recipe.id}'>
       <header> 
         <h2>${recipe.name})</h2>
+        <h3>${recipe.flavour}</h3>
       </header>
-      <span class="button" onClick="deleteRecipe(event)">delete</span>
-      <span class="button1" onClick="renderEditRecipe(${recipe.id})">edit</span>
-      <br></br>
       <img src="${recipe.img}>"
       <br>
       <span><h4>Ingredients</h4></span>
@@ -55,7 +53,6 @@ function loginState() {
       <ul class="menu">
         <li onClick="renderAddRecipe()">Add Recipe</li>
         <li onClick="renderRecipeList()">View Recipe</li>
-        <li onClick="renderSignUp()">Sign Up</li>
         <li onClick="renderLogOut()">Logout</li> 
       </ul>
       </nav>
