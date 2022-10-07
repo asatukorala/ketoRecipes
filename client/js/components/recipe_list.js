@@ -14,7 +14,7 @@ function renderRecipes() {
     return state.recipes.map(recipe => `
       <section class="recipe" data-id='${recipe.id}'>
       <header> 
-        <h2>${recipe.name})</h2>
+        <h2>${recipe.name}</h2>
         <h3>${recipe.flavour}</h3>
       </header>
       <span class="button1" onClick="renderEditRecipe(${recipe.id})">edit</span>
@@ -34,6 +34,7 @@ function renderRecipes() {
       <header> 
         <h2>${recipe.name})</h2>
         <h3>${recipe.flavour}</h3>
+        <h2>${recipe.name}</h2>
       </header>
       <img src="${recipe.img}>"
       <br>
