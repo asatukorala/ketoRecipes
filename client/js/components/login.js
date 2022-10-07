@@ -45,4 +45,3 @@ function renderError(errorMessage) {
     `<h2 style='color: red;'>${errorMessage}</h2>` +
     page.innerHTML
 }
-
