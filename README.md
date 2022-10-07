@@ -8,7 +8,7 @@ It's a CRUD (Create Read Update Delete) app. This is a group project by Zena, Ge
 
 We used the Scavenger Hunt app as a guide when writing it. It was written in a step by step process. We collaborated via GitHub.
 
-This app uses the Model View Controller framework.
+This app uses the Model View Controller framework. The user has the ability to add, edit and delete recipes. 
 
 # :pencil: Planning & Problem Solving -
 We began our planning on a Trello board. In the user stories, we listed functions to create for that user story with brief information. 
