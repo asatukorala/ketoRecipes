@@ -4,11 +4,11 @@ function renderAddRecipe() {
       <form onSubmit="createRecipe(event)">
         <h2>Add Recipes</h2>
         <fieldset>
-          <label for="">Name: </label>
+          <label for="">Recipe name: </label>
           <input type="text" name="name">
         </fieldset>
         <fieldset>
-          <label for="">Img: </label>
+          <label for="">Image: </label>
           <input type="text" name="img">
         </fieldset>
         <fieldset>
@@ -32,7 +32,6 @@ function renderAddRecipe() {
 function createRecipe(event) {
   event.preventDefault()
   const form = event.target
-
   const data = Object.fromEntries(new FormData(form))
 
   fetch('/api/recipes', {
