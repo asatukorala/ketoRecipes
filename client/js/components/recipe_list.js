@@ -34,7 +34,6 @@ function renderRecipes() {
       <header> 
         <h2>${recipe.name}</h2>
         <h3>${recipe.flavour}</h3>
-        <h2>${recipe.name}</h2>
       </header>
       <img src="${recipe.img}>"
       <br>

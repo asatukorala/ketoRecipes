@@ -46,10 +46,8 @@ function editRecipe(event) {
   })
     .then(res => res.json())
     .then(recipe => {
-      console.log(state.recipes)
       state.recipes = state.recipes.filter(r => r.id != recipe)
-
+      state.recipes[state.recipeId] = recipe
       renderRecipeList()
-      location.reload()
     })
 }
