@@ -32,7 +32,7 @@ function renderRecipes() {
     return state.recipes.map(recipe => `
       <section class="recipe" data-id='${recipe.id}'>
       <header> 
-        <h2>${recipe.name})</h2>
+        <h2>${recipe.name}</h2>
         <h3>${recipe.flavour}</h3>
         <h2>${recipe.name}</h2>
       </header>
