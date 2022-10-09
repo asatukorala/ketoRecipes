@@ -14,13 +14,13 @@ This app uses the Model View Controller framework. The user has the ability to a
 We began our planning on a Trello board. In the user stories, we listed functions to create for that user story with brief information. 
 
 Trello board image:
-https://i.imgur.com/xU2cQM6.png
+![TBImage](https://i.imgur.com/xU2cQM6.png)
 
 Wireframes: 
-https://i.imgur.com/AWANNLL.png 
+![Wireframes](https://i.imgur.com/AWANNLL.png)
 
 Block diagram of how components relate to each other:
-https://i.imgur.com/Kdt0KYq.png
+![BlockDiagram](https://i.imgur.com/Kdt0KYq.png)
 
 When we had problems, we spent time together working on fixing it. Screen sharing on Zoom was used allowing all team members to see the problem.
 
