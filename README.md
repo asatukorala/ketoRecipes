@@ -1,5 +1,5 @@
 # Keto Recipes
-An single-page application (SPA) which allows the user to manage keto recipes.
+A single-page application (SPA) which allows the user to manage keto recipes.
 
 # :computer: [Click here](https://infinite-wildwood-14300.herokuapp.com/) to see our live project!
 
@@ -19,7 +19,8 @@ https://i.imgur.com/xU2cQM6.png
 Wireframes: 
 https://i.imgur.com/AWANNLL.png 
 
-Diagram:
+Block diagram of how components relate to each other:
+https://i.imgur.com/Kdt0KYq.png
 
 When we had problems, we spent time together working on fixing it. Screen sharing on Zoom was used allowing all team members to see the problem.
 
